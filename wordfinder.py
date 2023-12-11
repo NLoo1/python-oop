@@ -21,6 +21,6 @@ class WordFinder:
         return word_list
 
     def random(self):
-        random_int = randint(0, len(self.word_list))
+        random_int = randint(0, len(self.word_list)-1)
         return self.word_list[random_int]
 

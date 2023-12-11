@@ -12,9 +12,10 @@ class SpecialWordFinder(WordFinder):
     def read_file(self):
         unfiltered_list = super().read_file()
         for line in unfiltered_list:
-            if("#" in line or line.isspace()):
+            if("#" in line):
                 unfiltered_list.remove(line)
-        return unfiltered_list
+        filtered_list = [x for x in unfiltered_list if x != ""]
+        return filtered_list
 
     def random(self):
-        super().random()
+        return super().random()
